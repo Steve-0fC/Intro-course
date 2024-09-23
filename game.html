@@ -1,0 +1,45 @@
+<!--Steven Clervil-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll the Dice!</title>
+    <link rel="stylesheet" href="main.CSS">
+</head>
+<body>
+    <h1>Click to start the game!</h1>
+    <button id="btn" onclick="rollDice()">Roll Dice</button>
+    <p id="Dice1"></p>
+    <p id="Dice2"></p>
+    <p id="Results"></p>
+
+    <script>
+        function rollDice(){
+            let minDieNumber = 1;
+            let maxDieNumber = 6;
+
+            let x = Math.floor(Math.random() * (maxDieNumber - minDieNumber + 1));
+            let y = Math.floor(Math.random() * (maxDieNumber - minDieNumber + 1));
+
+            document.getElementById("Dice1").innerHTML = " You got a [" + x + "] on your first dice #1";
+            document.getElementById("Dice2").innerHTML = " You got a [" + y + "] on your second dice #2";
+
+            let rollTotal = x + y;
+
+            if 
+            (rollTotal == 7){
+                document.getElementById("Results").innerHTML = "You got a 7!!!  ***Awsome Work!!***   You Won!"
+            }
+
+            else if (rollTotal == 11) {
+                document.getElementById("Results").innerHTML = "You rolled an 11! Sorry for losing :("
+            }
+
+            else{
+            document.getElementById("Results").innerHTML = "That wasn't it! PLEASE TRY AGAIN!"
+            }
+        }
+    </script>
+</body>
+</html>
