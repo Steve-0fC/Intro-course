@@ -1,0 +1,29 @@
+<!--Steven Clervil-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of input</title>
+    <link rel="stylesheet" href="main.CSS">
+</head>
+<body>
+    <h1>What holiday falls on the 31st of October?</h1>
+    <p id="result"></p>
+    <button id="btn1" onclick="checkMyString()">Have at it!</button>
+    <script>
+        function checkMyString(){
+            let str = prompt("");
+            let word = `Halloween`;
+            let rersult;
+            if (str.includes(word)){
+                result = `Congrat's "${word}" was the correct awnser!`;
+            }
+            else{
+             result = `I'm sorry to say but that wasn't "${word}" Try again if you plz!`;
+        }
+        document.getElementById("result").textContent =  result;
+        }
+    </script>
+</body>
+</html>
