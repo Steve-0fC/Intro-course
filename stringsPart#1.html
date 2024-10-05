@@ -1,0 +1,37 @@
+<!--Steven Clervil-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome or Not.</title>
+</head>
+<!--The Action&Processes-->
+<body> 
+  <div class="Science Class">
+     <!--0utPut-->
+    <h1>Palindrome's.</h1>     
+    <!--inPut-->
+    <input id="textB" type="text" placeholder="Write a palindrome"><br>
+    <button onclick="Palindrome()">Done</button>
+    <p id="result"></p>
+  </div> 
+<script>
+    function Palindrome(){
+       
+        const textB = document.getElementById("textB").value.toLowerCase()
+
+        const reversed = textB.split('').reverse().join('')
+
+        const output = textB === reversed ? "This works as a palindrome, thank you." : "Not a palindrome, Try again!."
+
+        document.getElementById("result").textContent = output
+
+        let sizeStrin = textB; 
+        alert(" You wrote " + sizeStrin.toUpperCase()); 
+    }
+</script>
+      
+</body>
+</html>
+

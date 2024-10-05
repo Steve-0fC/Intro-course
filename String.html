@@ -1,0 +1,67 @@
+<!--Steven Clervil-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something about strings</title>
+    <script src="MystringJavaSc.js"></script>
+</head>
+<style>
+    button{
+        color: black;
+        background-color: burlywood;
+        font-weight: bold;
+        ;
+    }
+    h1{
+        color: rgb(68, 48, 22);
+    }
+</style>
+<body>
+    <h1>Put your name & 5 dighit zip here.</h1>
+    <!--0utPut-->
+    <p id="F_L_name"></p>
+    <!--inPut-->
+    <input id="firstname" type="text" placeholder="Enter First Name Here" /> 
+    <input id="lastname" type="text" placeholder="Enter Last Name Here" />
+    <input id="zipcode" type="text" placeholder="Zip Here" /><br>
+    <!--The click-->
+    <button onclick="evaluate_length()">Done!</button>
+    <!--Action/Process-->
+    <script>
+        function evaluate_length(){
+            
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+            let zip = document.getElementById("zipcode").value;
+             //alert("So your name IS?? " + firstname + " " + lastname + " Awsome name! can u hit da duggie.");
+            let full_name = firstname + " " + lastname;;
+            let name_length = full_name.length -1; 
+            if(name_length > 20){
+                alert("Wow there! That's pretty long slow down more then 20 characters.");
+                p("Wow there! That's pretty long slow down.#2");
+            }              
+            else  {
+                alert("Perfect! " + full_name + " It's just under 20 characters.");
+            }
+
+            let zip_length = zip.length;
+            if(zip_length < 5){
+                alert("Your zip code was " + " ` " + zip + " ` " + " did NOT WORK " + firstname + " Try again.");
+            }
+            else {
+                alert("It works!");
+            }
+
+
+           let s_string = full_name.substring(0, 8);
+           alert(" Substring - " + s_string.toUpperCase(''));      
+
+           alert(" Your name is this long: " + name_length);
+           document.getElementById("F_L_name").innerHTML = full_name.trim();
+          
+        }
+    </script>
+</body>
+</html>
