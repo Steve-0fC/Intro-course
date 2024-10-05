@@ -1,14 +1,55 @@
-<!-- Steven Clervil -->
+<!--Steven Clervil-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index_page</title>
-</head>
-<body>
-    <header><h1>Index Page #1</h1></header> 
-    <paragraph>What was writen in the stars has already been written.</paragraph>
-    <img src="./SponngiBob's.jpg" width="200px" height="240px">
-</body>
+    <title>Index Page</title>
+    <link rel="stylesheet" href="main.CSS">
+    </head>
+        <body>
+            <header><h1>Index main.Page</h1></header> 
+            <p style="font-size: larger ;">Nahh we got ya</p>
+            <img id="pic&meme" src="./pic&meme/SponngiBob's.jpg" height="200px" width="300px" onmouseover="bigImg(this)" onmouseout="normalImg(this)" style="border:0 px" alt="Sponggie Bob"><br>
+           
+            
+            <!--butns4EvEnt-->
+            <button id="changeTextButton#1">Start</button>
+                <p id="text#1">Click #1</p>    
+            <button id="changeTextButton#2">Stop</button>
+                <p id="text#2">Click #2</p>
+ 
+            <script>
+                //Enlarge_Minimize
+                function bigImg(x) {
+                    x.style.height ="300px";
+                    x.style.width = "400px";
+                }
+                function normalImg(x) {
+                    x.style.height ="200px";
+                    x.style.width = "300px";
+                }
+                
+            //butnEvEt to move&stop patt
+            document.getElementById(`changeTextButton#1`).addEventListener(`click`, function(event) {
+            document.getElementById (`text#1`).textContent = `Click 1 activate`;
+            });   
+            document.getElementById(`changeTextButton#2`).addEventListener(`click`, function(event) {
+            document.getElementById (`text#2`).textContent = `Click 2 activate`;
+            });
+
+          </script>
+          <br>
+
+            <button onclick="startMoving('up')">Up</button>
+            <button onclick="startMoving('down')">Down</button>
+            <button onclick="startMoving('left')">Left</button>
+            <button onclick="startMoving('right')">Right</button>
+            <button onclick="stopMoving()">Stop</button>
+<div id="useThis">
+    <img id="movePattrick" src="pic&meme/Patrick_Starstarr.png" height="150px" width="200px"/>
+
+</div>
+<script src="MoveImgScrpt.js"></script>
+     </body>
 </html>
